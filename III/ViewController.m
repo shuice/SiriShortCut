@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    // [self addSiriShortCut];
-    [self addSiriSuggestion];
+    [self addSiriShortCut];
+    //[self addSiriSuggestion];
     
 }
 
@@ -30,25 +30,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+// 文档https://developer.apple.com/documentation/sirikit/donating_shortcuts
 - (void)addSiriShortCut
 {
     NSUserActivity *activity = [[NSUserActivity alloc] initWithActivityType:@"com.tencent.xiaoyi.temp.activity"];
-    self.userActivity = activity;
+    activity.persistentIdentifier = [NSString stringWithFormat:@"%d", arc4random()];    // 唯一ID，未来删除activity用它
     activity.title = @"activity_title";
-    activity.eligibleForSearch = true;// 表示此处仅用于CoreSpotlight搜索，而不进行应用间数据传递处理
-    activity.expirationDate = [[NSDate alloc] initWithTimeIntervalSinceNow:100000];
+    activity.eligibleForPrediction = YES;   // 有了它，可以在spotlight下方显示siri建议
+    activity.eligibleForSearch = YES;// 表示此处仅用于CoreSpotlight搜索，而不进行应用间数据传递处理
     activity.userInfo = @{@"key_1": @"value_1"};
-    activity.needsSave = true;
-    //   activity.eligibleForPublicIndexing = true;打开云索引功能，当很多用户都搜素时，所有安装过该应用的客户都能通过CoreSpotlight搜索到(即使用户没有打开过)
-    // iOS12
-    //   activity.suggestedInvocationPhrase = @"说点什么好呢？";
+    if (@available(iOS 12.0, *))
     {
-        CSSearchableItemAttributeSet *attributeSet = [[CSSearchableItemAttributeSet alloc] initWithItemContentType:CFBridgingRelease(kUTTypeItem)];
-        attributeSet.contentDescription = @"contentDescription";
-        attributeSet.relatedUniqueIdentifier = nil;
+        activity.suggestedInvocationPhrase = @"Ting Ge Shi Qu";
     }
-    
-    [activity becomeCurrent];
+    self.userActivity = activity;   // 文档说same as [activity becomeCurrent]，实际上两个都需要调用
+    [activity becomeCurrent]; // donates the activity to Siri
 }
 
 
