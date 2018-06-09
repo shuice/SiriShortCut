@@ -19,9 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self addSiriShortCut];
-    //[self addSiriSuggestion];
-    
+    //[self addSiriShortCut];
+    [self addSiriSuggestion];
 }
 
 
@@ -50,12 +49,19 @@
 
 - (void)addSiriSuggestion
 {
-//    INIntent *inIntent = [[INSetClimateSettingsInCarIntent alloc] init];
-//    inIntent.dat
-//    //inIntent.
-//    INInteraction *action = [[INInteraction alloc] initWithIntent:inIntent response:nil];
-//    [action donateInteractionWithCompletion:^(NSError * _Nullable error) {
-//        NSLog(@"%@", error);
-//    }];
+    INMediaItem *mediaItem = [[INMediaItem alloc] initWithIdentifier:@"Identifier"
+                                                               title:@"title_凉凉"
+                                                                type:INMediaItemTypeSong
+                                                             artwork:nil];
+    INPlayMediaIntent *intent = [[INPlayMediaIntent alloc] initWithMediaItems:@[mediaItem]
+                                                               mediaContainer:mediaItem
+                                                                 playShuffled:@(YES)
+                                                           playbackRepeatMode:INPlaybackRepeatModeAll
+                                                               resumePlayback:@(NO)];
+    intent.suggestedInvocationPhrase = @"播放凉凉";
+    INInteraction *action = [[INInteraction alloc] initWithIntent:intent response:nil];
+    [action donateInteractionWithCompletion:^(NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    }];
 }
 @end
