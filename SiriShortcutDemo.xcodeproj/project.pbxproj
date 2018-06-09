@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8E50A4DB20CAB37A008E19FE /* III.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = III.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E50A4DB20CAB37A008E19FE /* SiriShortcutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriShortcutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E50A4DE20CAB37A008E19FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8E50A4DF20CAB37A008E19FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8E50A4E120CAB37A008E19FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		8E50A4D220CAB37A008E19FE = {
 			isa = PBXGroup;
 			children = (
-				8E50A4DD20CAB37A008E19FE /* III */,
+				8E50A4DD20CAB37A008E19FE /* SiriShortcutDemo */,
 				8E50A4DC20CAB37A008E19FE /* Products */,
 				8E50A4F420CAB392008E19FE /* Frameworks */,
 			);
@@ -60,12 +60,12 @@
 		8E50A4DC20CAB37A008E19FE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E50A4DB20CAB37A008E19FE /* III.app */,
+				8E50A4DB20CAB37A008E19FE /* SiriShortcutDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E50A4DD20CAB37A008E19FE /* III */ = {
+		8E50A4DD20CAB37A008E19FE /* SiriShortcutDemo */ = {
 			isa = PBXGroup;
 			children = (
 				8E50A4DE20CAB37A008E19FE /* AppDelegate.h */,
@@ -78,7 +78,7 @@
 				8E50A4EC20CAB37C008E19FE /* Info.plist */,
 				8E50A4ED20CAB37C008E19FE /* main.m */,
 			);
-			path = III;
+			path = SiriShortcutDemo;
 			sourceTree = "<group>";
 		};
 		8E50A4F420CAB392008E19FE /* Frameworks */ = {
@@ -94,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E50A4DA20CAB37A008E19FE /* III */ = {
+		8E50A4DA20CAB37A008E19FE /* SiriShortcutDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E50A4F120CAB37C008E19FE /* Build configuration list for PBXNativeTarget "III" */;
+			buildConfigurationList = 8E50A4F120CAB37C008E19FE /* Build configuration list for PBXNativeTarget "SiriShortcutDemo" */;
 			buildPhases = (
 				8E50A4D720CAB37A008E19FE /* Sources */,
 				8E50A4D820CAB37A008E19FE /* Frameworks */,
@@ -106,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = III;
+			name = SiriShortcutDemo;
 			productName = III;
-			productReference = 8E50A4DB20CAB37A008E19FE /* III.app */;
+			productReference = 8E50A4DB20CAB37A008E19FE /* SiriShortcutDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E50A4D620CAB37A008E19FE /* Build configuration list for PBXProject "III" */;
+			buildConfigurationList = 8E50A4D620CAB37A008E19FE /* Build configuration list for PBXProject "SiriShortcutDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E50A4DA20CAB37A008E19FE /* III */,
+				8E50A4DA20CAB37A008E19FE /* SiriShortcutDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -338,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E50A4D620CAB37A008E19FE /* Build configuration list for PBXProject "III" */ = {
+		8E50A4D620CAB37A008E19FE /* Build configuration list for PBXProject "SiriShortcutDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E50A4EF20CAB37C008E19FE /* Debug */,
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E50A4F120CAB37C008E19FE /* Build configuration list for PBXNativeTarget "III" */ = {
+		8E50A4F120CAB37C008E19FE /* Build configuration list for PBXNativeTarget "SiriShortcutDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E50A4F220CAB37C008E19FE /* Debug */,
